@@ -1,0 +1,15 @@
+{% extends 'base.html' %} 
+
+{% block title %} Delete Post {{post.name}} {% endblock %} 
+
+{% block content %} 
+
+<h1>Are you sure?</h1>
+<h3>Deleting this post will be permanent</h3>
+
+<form action="/posts/{{post.id}}/delete", method='POST'>
+    <a href="/editPost/{{post.posted_by}}/{{post.id}}" class="cancelButton">Cancel</a>
+    <button class="deleteButton">Delete</button>
+</form>
+
+{% endblock %}

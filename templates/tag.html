@@ -1,0 +1,31 @@
+{% extends 'base.html' %} 
+
+{% block title %} Tag {{tag.id}} {% endblock %} 
+
+{% block content %} 
+<div style= "font-size:30px; font-weight: bolder; padding: 10px;">{{tag.name}}<a href="/tags/{{tag.id}}/edit" class="editButton">Edit Tag</a></div>
+<table>
+    {% for post in tag.posts %}
+    <tr>
+        <td>
+            <span class='title'>{{post.title}}</span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span class='comment'>{{post.comment}}</span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span class='timeMade'>By {{post.user.get_full_name}} at {{post.time_made}}</span>
+        </td>
+        <td>
+            <a href="/editPost/{{post.posted_by}}/{{post.id}}" class="editButton">Edit Post</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<a href="/" class="cancelButton">Back</a>
+{% endblock %} 

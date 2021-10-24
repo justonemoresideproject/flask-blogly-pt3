@@ -1,0 +1,114 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.alert {
+    position: absolute;
+    background-color: rgb(134, 0, 0);
+    border-style: solid black;
+    color: white;
+    display: inline block;
+}
+
+.homepageUsers {
+    padding: 0px;
+}
+
+.navBar {
+    margin: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: darkgray;
+    border-style: solid black;
+}
+
+.navBar a {
+    padding: 10px 10px 1px 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(2, 2, 2);
+    text-decoration: none;
+    display: inline block;
+}
+
+.navBar a:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.profilePic {
+    width: 40px;
+    height: 40px;
+    /* size: 30px 30px; */
+    margin-right: 10px;
+}
+
+.profileName {
+    font: 15px;
+    font-weight: bold;
+}
+
+.userPic {
+    width: 60px;
+    height: 60px;
+    size: 60px 60px;
+}
+
+li {
+    padding: 6px;
+    padding-left: 10px;
+    list-style: none;
+    font: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul > li:nth-of-type(odd) {
+    background-color: darkgray;
+}
+
+.userName {
+    text-decoration: underline;
+    color: black;
+    font-size: 24px;
+}
+
+.userName :hover {
+    /* text-decoration: underline rgb(124, 121, 121); */
+    background-color: rgb(255, 255, 255);
+}
+
+.profileName {
+    font: 18px;
+    
+}
+
+.cancelButton {
+    display: inline-block;
+    background-color: rgb(134, 0, 0);
+    color: white;
+}
+
+.deleteButton {
+    display: inline-block;
+    background-color: black;
+    color: white
+}
+
+.deleteButton :hover {
+    color: red;
+}
+
+.confirmButton {
+    display: inline-block;
+    background-color: rgb(2, 170, 2);
+    color: white;
+}
+
+.editButton {
+    display: inline-block;
+    color: purple;
+    margin-left: 10px;
+    font-size: 15px;
+}

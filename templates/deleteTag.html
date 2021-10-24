@@ -1,0 +1,15 @@
+{% extends 'base.html' %} 
+
+{% block title %} Delete Tag {{tag.name}} {% endblock %} 
+
+{% block content %} 
+
+<h1>Are you sure?</h1>
+<h3>Deleting this tag will be permanent</h3>
+
+<form action="/tags/{{tag.id}}/delete", method='POST'>
+    <a href="/tags/{{tag.id}}/edit" class="cancelButton">Cancel</a>
+    <button class="deleteButton">Delete</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} Homepage {% endblock %}
+
+{% block content %}
+<h1>Users</h1>
+<ul class='homepageUsers'>
+    {% for user in users %}
+    <li><img src="{{user.image_url}}" alt="" class="profilePic"><a href="/user/{{user.id}}" class="userName"><span class='userName'>{{user.get_full_name}}</span></a> <a href="/editUser/{{user.id}}">Edit</a></li>
+    {% endfor %}
+</ul>
+<form action="/addNewUser">
+    <button>Add New User</button>
+</form>
+<a href="/tags">See all tags</a>
+{% endblock %}
